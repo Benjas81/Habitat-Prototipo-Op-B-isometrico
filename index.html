@@ -17,7 +17,7 @@
     }
     .contenedor-360 {
       width: 100%;
-      max-width: 900px;
+      max-width: 765px; /* Reducido un 15% */
       padding: 20px;
       box-sizing: border-box;
       text-align: center;
@@ -33,7 +33,6 @@
 <body>
 
   <div class="contenedor-360">
-    <!-- Configuración exacta para 73 fotos (del 1 al 73) -->
     <div
       class="cloudimage-360"
       data-folder="fotos/"
@@ -43,11 +42,12 @@
       data-speed="80"
       data-drag-speed="100"
       data-pointer
+      data-zoom-factor="2" /* <-- ACTIVA EL BOTÓN DE ZOOM (Aumento 2x) */
+      data-full-screen     /* <-- (OPCIONAL) Permite ver a pantalla completa */
     ></div>
     <p><i>Haz clic y arrastra para girar el objeto</i></p>
   </div>
 
-  <!-- Librería del visor -->
   <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
   <script>
     window.CI360.init();
